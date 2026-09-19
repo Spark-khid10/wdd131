@@ -1,0 +1,73 @@
+   body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2d2d2d;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+      nav {
+     display: flex;
+     justify-content: space-around; /* or your preference */
+   }
+
+   /* ===== Header ===== */
+header {
+  background-color: #1b4332; /* forest green */
+  color: #ffffff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+/* Nav links styling */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #95d5b2; /* mint accent on hover */
+  color: #1b4332;
+}
+
+/* ===== Main content ===== */
+main {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1b4332;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Links & buttons ===== */
+a {
+  color: #f4a261; /* soft orange accent */
+}
+
+button {
+  background-color: #95d5b2;
+  color: #1b4332;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f4a261;
+  color: #ffffff;
+}
