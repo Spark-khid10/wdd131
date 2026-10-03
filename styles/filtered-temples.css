@@ -130,3 +130,19 @@ footer p { margin: 0.25rem 0; }
   color: var(--sun);
   font-size: 0.875rem;
 }
+
+@media (max-width: 500px) {
+  nav {
+    gap: 0.25rem 1rem;
+    padding: 0.5rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  figure img {
+    height: 10rem;
+  }
+}
