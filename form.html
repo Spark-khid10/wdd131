@@ -19,8 +19,10 @@
 
   <main>
     <form action="review.html" method="get">
+        <p class="form-note">Fields marked with <span class="required-mark" aria-hidden="true">*</span> are required.</p>
+
       <div class="field">
-        <label for="product">Product Name</label>
+        <label for="product">Product Name <span class="required-mark" aria-hidden="true">*</span></label>
         <select id="product" name="product" required>
           <option value="" disabled selected>Select a Product ...</option>
           <!-- Remaining options are added here by scripts/form.js -->
@@ -28,7 +30,7 @@
       </div>
 
       <fieldset class="field rating-field">
-        <legend>Overall Rating</legend>
+        <legend>Overall Rating <span class="required-mark" aria-hidden="true">*</span></legend>
         <div class="rating">
           <span class="rating-item">
             <label for="rating-1"><span class="stars">&star;</span></label>
@@ -54,7 +56,7 @@
       </fieldset>
 
       <div class="field">
-        <label for="install-date">Date of Installation</label>
+        <label for="install-date">Date of Installation <span class="required-mark" aria-hidden="true">*</span></label>
         <input type="date" id="install-date" name="install-date" required>
       </div>
 

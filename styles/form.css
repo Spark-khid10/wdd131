@@ -208,3 +208,14 @@ footer p { margin: 0.25rem 0; }
     gap: 1rem 0.6rem;
   }
 }
+.required-mark {
+  color: var(--sun-text);
+  font-weight: 700;
+}
+
+.form-note {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  opacity: 0.8;
+}
