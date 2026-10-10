@@ -1,0 +1,210 @@
+:root {
+  --ink: #14262b;
+  --mist: #eef3f4;
+  --teal: #0b5a60;
+  --sun: #f2b441;
+  --sun-text: #b45309;
+  --line: #bccbcd;
+  --white: #ffffff;
+  --heading: "Bricolage Grotesque", Georgia, serif;
+  --body: "Figtree", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--ink);
+  color: var(--mist);
+  text-align: center;
+  padding: 1.25rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+main {
+  width: min(100% - 2rem, 36rem);
+  margin-inline: auto;
+  padding-block: 2rem 2.5rem;
+}
+
+form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+  border: none;
+  padding: 0;
+}
+
+.field:last-child { margin-bottom: 0; }
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 0.4rem;
+}
+
+.hint {
+  font-weight: 400;
+  color: var(--ink);
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+textarea { resize: vertical; }
+
+/* Star rating */
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rating-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stars {
+  color: var(--sun-text);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.rating-item input[type="radio"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: var(--teal);
+}
+
+/* Checkboxes */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-row label {
+  margin: 0;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--teal);
+}
+
+/* Submit button */
+input[type="submit"] {
+  width: 100%;
+  background: var(--teal);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: var(--heading);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+  background: var(--ink);
+}
+
+/* Confirmation page summary */
+.summary {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.summary dt {
+  color: var(--teal);
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.summary dd { margin: 0.1rem 0 0; }
+
+.review-count {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--mist);
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+footer {
+  background: var(--ink);
+  color: var(--mist);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p { margin: 0.25rem 0; }
+
+#lastModified {
+  color: var(--sun);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+  .rating {
+    justify-content: center;
+    gap: 1rem 0.6rem;
+  }
+}

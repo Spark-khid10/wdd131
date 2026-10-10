@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 – Review Submitted</title>
+  <meta name="description" content="Confirmation page for a submitted product review, WDD 131 Dynamic Web Fundamentals, by Ephraim Enyieso Otikor.">
+  <meta name="author" content="Ephraim Enyieso Otikor">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Thank You!</h1>
+  </header>
+
+  <main>
+    <section class="summary">
+      <p>Your review has been recorded. Here's what you submitted:</p>
+      <dl>
+        <dt>Product:</dt>
+        <dd id="summary-product"></dd>
+
+        <dt>Rating:</dt>
+        <dd id="summary-rating"></dd>
+
+        <dt>Date of Installation:</dt>
+        <dd id="summary-date"></dd>
+
+        <dt>Useful Features:</dt>
+        <dd id="summary-features"></dd>
+
+        <dt>Written Review:</dt>
+        <dd id="summary-review"></dd>
+
+        <dt>Name:</dt>
+        <dd id="summary-name"></dd>
+      </dl>
+    </section>
+
+    <p class="review-count">You are reviewer #<span id="review-count"></span> for our products!</p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ephraim Enyieso Otikor – Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

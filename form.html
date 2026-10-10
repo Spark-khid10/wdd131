@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 – Product Review Form</title>
+  <meta name="description" content="A product review submission form for WDD 131 Dynamic Web Fundamentals, built by Ephraim Enyieso Otikor.">
+  <meta name="author" content="Ephraim Enyieso Otikor">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+      <div class="field">
+        <label for="product">Product Name</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- Remaining options are added here by scripts/form.js -->
+        </select>
+      </div>
+
+      <fieldset class="field rating-field">
+        <legend>Overall Rating</legend>
+        <div class="rating">
+          <span class="rating-item">
+            <label for="rating-1"><span class="stars">&star;</span></label>
+            <input type="radio" id="rating-1" name="rating" value="1" required>
+          </span>
+          <span class="rating-item">
+            <label for="rating-2"><span class="stars">&star;&star;</span></label>
+            <input type="radio" id="rating-2" name="rating" value="2" required>
+          </span>
+          <span class="rating-item">
+            <label for="rating-3"><span class="stars">&star;&star;&star;</span></label>
+            <input type="radio" id="rating-3" name="rating" value="3" required>
+          </span>
+          <span class="rating-item">
+            <label for="rating-4"><span class="stars">&star;&star;&star;&star;</span></label>
+            <input type="radio" id="rating-4" name="rating" value="4" required>
+          </span>
+          <span class="rating-item">
+            <label for="rating-5"><span class="stars">&star;&star;&star;&star;&star;</span></label>
+            <input type="radio" id="rating-5" name="rating" value="5" required>
+          </span>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="install-date">Date of Installation</label>
+        <input type="date" id="install-date" name="install-date" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Which features did you find useful in the product? <span class="hint">(Check all that apply)</span></legend>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="feature-durability" name="features" value="Durability">
+          <label for="feature-durability">Durability</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
+          <label for="feature-ease">Ease of Use</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="feature-performance" name="features" value="Performance">
+          <label for="feature-performance">Performance</label>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="feature-design" name="features" value="Design">
+          <label for="feature-design">Design</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="review">Written Review <span class="hint">(Optional)</span></label>
+        <textarea id="review" name="review" rows="5"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="username">Your Name <span class="hint">(Optional)</span></label>
+        <input type="text" id="username" name="username">
+      </div>
+
+      <div class="field">
+        <input type="submit" value="Post Review">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ephraim Enyieso Otikor – Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
