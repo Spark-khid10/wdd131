@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources – DevPath</title>
+  <meta name="description" content="Curated free resources for learning software development, organized by topic, plus a form to suggest your own.">
+  <meta name="author" content="Ephraim Enyieso Otikor">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/devpath.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="site-header-inner">
+      <a href="index.html" class="logo">DevPath</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="resources.html" aria-current="page">Resources</a>
+        <a href="mistakes.html">Mistakes</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Resources</h1>
+    <p class="lede">Free, genuinely useful resources, sorted by topic instead of dumped in one long list. These are the ones I actually use.</p>
+
+    <section class="resource-category">
+      <h2><img src="images/icon-code.svg" alt="" width="40" height="40" loading="lazy"> HTML &amp; CSS</h2>
+      <ul class="resource-list">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener">MDN Web Docs: Learn web development</a> — the most reliable reference for how HTML and CSS actually work.</li>
+        <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener">freeCodeCamp: Responsive Web Design</a> — a free, structured course with built-in exercises.</li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> — short, practical articles for when you're stuck on one specific thing.</li>
+      </ul>
+    </section>
+
+    <section class="resource-category">
+      <h2><img src="images/icon-book.svg" alt="" width="40" height="40" loading="lazy"> JavaScript</h2>
+      <ul class="resource-list">
+        <li><a href="https://javascript.info/" target="_blank" rel="noopener">javascript.info</a> — thorough, modern, and free from start to finish.</li>
+        <li><a href="https://eloquentjavascript.net/" target="_blank" rel="noopener">Eloquent JavaScript</a> — a full free book, good once you want to go deeper than tutorials.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener">MDN JavaScript Guide</a> — the reference you'll keep coming back to.</li>
+      </ul>
+    </section>
+
+    <section class="resource-category">
+      <h2><img src="images/icon-tools.svg" alt="" width="40" height="40" loading="lazy"> Tools &amp; Workflow</h2>
+      <ul class="resource-list">
+        <li><a href="https://git-scm.com/doc" target="_blank" rel="noopener">Git Documentation</a> — the official docs, better than most tutorials once you know the basics.</li>
+        <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs</a> — for everything beyond just `git push`.</li>
+        <li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">VS Code Docs</a> — worth ten minutes to learn the shortcuts you'll use daily.</li>
+      </ul>
+    </section>
+
+    <section class="resource-category">
+      <h2><img src="images/icon-people.svg" alt="" width="40" height="40" loading="lazy"> Community &amp; Career</h2>
+      <ul class="resource-list">
+        <li><a href="https://forum.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp Forum</a> — patient, beginner-friendly help.</li>
+        <li><a href="https://dev.to/" target="_blank" rel="noopener">DEV Community</a> — articles and discussion from working developers.</li>
+        <li><a href="https://www.reddit.com/r/learnprogramming/" target="_blank" rel="noopener">r/learnprogramming</a> — good for "is this normal?" questions.</li>
+      </ul>
+    </section>
+
+    <section class="suggest-form">
+      <h2>Suggest a Resource</h2>
+      <p class="lede">Found something that helped you? Add it here.</p>
+
+      <form action="thanks.html" method="get">
+        <p class="form-note">Fields marked with <span class="required-mark" aria-hidden="true">*</span> are required.</p>
+
+        <div class="field">
+          <label for="resource-name">Resource Name <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="text" id="resource-name" name="resource-name" required>
+        </div>
+
+        <div class="field">
+          <label for="resource-url">Resource URL <span class="required-mark" aria-hidden="true">*</span></label>
+          <input type="url" id="resource-url" name="resource-url" placeholder="https://" required>
+        </div>
+
+        <div class="field">
+          <label for="category">Category <span class="required-mark" aria-hidden="true">*</span></label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category ...</option>
+            <option value="html-css">HTML &amp; CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="tools">Tools &amp; Workflow</option>
+            <option value="community">Community &amp; Career</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="why-useful">Why is it useful? <span class="hint">(Optional)</span></label>
+          <textarea id="why-useful" name="why-useful" rows="4"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="suggester-name">Your Name <span class="hint">(Optional)</span></label>
+          <input type="text" id="suggester-name" name="suggester-name">
+        </div>
+
+        <div class="field">
+          <input type="submit" value="Submit Suggestion" class="button">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ephraim Enyieso Otikor – DevPath</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Your Starting Point – DevPath</title>
+  <meta name="description" content="An interactive quiz that recommends where to start learning software development, based on your experience, interests, and available time.">
+  <meta name="author" content="Ephraim Enyieso Otikor">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/devpath.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/quiz.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="site-header-inner">
+      <a href="index.html" class="logo">DevPath</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="resources.html">Resources</a>
+        <a href="mistakes.html">Mistakes</a>
+        <a href="quiz.html" aria-current="page">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Find Your Starting Point</h1>
+    <p class="lede">Three quick questions, then a recommendation for exactly where to begin.</p>
+
+    <div id="quiz-app"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ephraim Enyieso Otikor – DevPath</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>

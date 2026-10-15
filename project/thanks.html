@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanks for the Suggestion – DevPath</title>
+  <meta name="description" content="Confirmation page after suggesting a resource on DevPath.">
+  <meta name="author" content="Ephraim Enyieso Otikor">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/devpath.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/thanks.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="site-header-inner">
+      <a href="index.html" class="logo">DevPath</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="resources.html">Resources</a>
+        <a href="mistakes.html">Mistakes</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Thanks for the suggestion!</h1>
+    <p class="lede">Here's what you submitted:</p>
+
+    <dl class="summary">
+      <dt>Resource Name:</dt>
+      <dd id="summary-name"></dd>
+
+      <dt>URL:</dt>
+      <dd id="summary-url"></dd>
+
+      <dt>Category:</dt>
+      <dd id="summary-category"></dd>
+
+      <dt>Why it's useful:</dt>
+      <dd id="summary-why"></dd>
+
+      <dt>Submitted by:</dt>
+      <dd id="summary-suggester"></dd>
+    </dl>
+
+    <a href="resources.html" class="button">Back to Resources</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Ephraim Enyieso Otikor – DevPath</p>
+    <p id="lastModified"></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+</html>
